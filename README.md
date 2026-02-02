@@ -44,3 +44,19 @@ Each subject contains multiple recording parts/sessions. For each part/session, 
 ├─ 2/
 └─ 3/
 ```
+### 1.3 31-subject subset structure (example: subject `1`)
+
+```text
+30_SUBJECT_FULL_DATASET/1/
+├─ 0/ # part id (typically 0..3)
+│ ├─ Left (bend 1 leg)/
+│ │ ├─ radar1.pkl
+│ │ ├─ radar2.pkl
+│ │ └─ ... radar8.pkl
+│ ├─ Left (bend both legs)/
+│ ├─ ...
+│ └─ Supine/
+├─ 1/
+├─ 2/
+└─ 3/
+```
