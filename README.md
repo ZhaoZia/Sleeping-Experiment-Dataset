@@ -115,3 +115,12 @@ print(type(obj))
 # If obj is a dict-like:
 if hasattr(obj, "keys"):
     print(obj.keys())
+```
+### 4.2 Load `.bag` in Python
+
+
+## 5. Citation / Acknowledgement
+
+## 6. License
+
+## 7. Contact
