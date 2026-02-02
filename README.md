@@ -29,3 +29,18 @@ Each subject contains multiple recording parts/sessions. For each part/session, 
    └─ 31/
 ```
 ### 1.2 72-subject subset structure (example: subject `1`)
+
+```text
+70_SUBJECT_FULL_DATASET/1/
+├─ 1/ # session/part id (typically 1..3)
+│ ├─ Left (bend 1 leg)/
+│ │ ├─ <hh-mm-ss>-radar1.pkl
+│ │ ├─ <hh-mm-ss>-radar2.pkl
+│ │ ├─ ... 
+| | └─ <hh-mm-ss>-radar8.pkl
+│ ├─ Left (bend both legs)/
+│ ├─ ...
+│ └─ Supine/
+├─ 2/
+└─ 3/
+```
