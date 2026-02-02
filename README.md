@@ -14,3 +14,5 @@ Each subject contains multiple recording parts/sessions. For each part/session, 
 ## 1. Directory Structure
 
 ### 1.1 Dataset Root
+
+### 1.2 70-subject subset structure (example: subject `1`)
