@@ -51,8 +51,19 @@ Each subject contains multiple recording parts/sessions. For each part/session, 
 ├─ 0/ # part id
 │ ├─ Left (bend 1 leg)/
 │ │ ├─ radar1.pkl
-│ │ ├─ radar2.pkl
-│ │ └─ ... radar8.pkl
+│ │ ├─ radar_map1.png
+│ │ ├─ radar_map1.npy
+| | ├─ radar2.pkl
+│ │ ├─ radar_map2.png
+│ │ ├─ radar_map2.npy
+│ │ ├─ ...
+│ │ ├─ radar8.pkl
+│ │ ├─ radar_map8.png
+│ │ ├─ radar_map8.npy
+│ │ ├─ radar_map_all.npy
+│ │ ├─ radar_map_all.png
+│ │ ├─ depth1.npz
+│ │ └─ depth1.png
 │ ├─ Left (bend both legs)/
 │ ├─ ...
 │ └─ Supine/
