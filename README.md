@@ -7,7 +7,7 @@ This dataset combines two subsets into a single release:
 - **Cohort_1** (68 subjects)
 - **Cohort_2** (31 subjects)
 
-Each subject contains multiple recording parts/sessions. For each part/session, data are organized by **sleep posture**, and each posture contains **8 radar channels** saved as `.pkl` files. A corresponding raw recording `.bag` file is stored at the subject root.
+Each subject contains multiple recording parts/sessions. For each part/session, data are organized by **sleep posture**, and each posture contains **8 radar channels** saved as `.pkl` files.
 
 ---
 
