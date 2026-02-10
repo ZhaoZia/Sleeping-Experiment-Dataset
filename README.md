@@ -50,7 +50,7 @@ Cohort_1/1/
 │ │ └─ depth1.png
 │ ├─ L1/
 │ ├─ ...
-│ └─ Supine/
+│ └─ SU/
 ├─ B2/
 └─ B3/
 ```
@@ -59,7 +59,7 @@ Cohort_1/1/
 ```text
 30_SUBJECT_FULL_DATASET/1/
 ├─ B0/ # Blanket id
-│ ├─ Left (bend 1 leg)/
+│ ├─ L0/
 │ │ ├─ radar1.pkl
 │ │ ├─ radar_map1.png
 │ │ ├─ radar_map1.npy
@@ -74,9 +74,9 @@ Cohort_1/1/
 │ │ ├─ radar_map_all.png
 │ │ ├─ depth1.npz
 │ │ └─ depth1.png
-│ ├─ Left (bend both legs)/
+│ ├─ L1/
 │ ├─ ...
-│ └─ Supine/
+│ └─ SU/
 ├─ B1/
 ├─ B2/
 └─ B3/
