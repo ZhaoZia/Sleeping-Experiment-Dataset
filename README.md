@@ -34,17 +34,20 @@ Each subject contains multiple recording parts/sessions. For each part/session, 
 Cohort_1/1/
 ├─ B1/ # Blanket id
 │ ├─ L0/
-│ │ ├─radar1.pkl
-│ │ ├─radar_map1.npy
-│ │ ├─radar_map1.png
+│ │ ├─ radar1.pkl
+│ │ ├─ radar_map1.png
+│ │ ├─ radar_map1.npy
+| | ├─ radar2.pkl
+│ │ ├─ radar_map2.png
+│ │ ├─ radar_map2.npy
 │ │ ├─ ...
 │ │ ├─ radar8.pkl
-│ │ ├─radar_map8.npy
-│ │ ├─radar_map8.png
-│ │ ├─radar_map_all.npy
-│ │ ├─radar_map_all.png
-│ │ ├─depth.npz
-| | └─depth.png
+│ │ ├─ radar_map8.png
+│ │ ├─ radar_map8.npy
+│ │ ├─ radar_map_all.npy
+│ │ ├─ radar_map_all.png
+│ │ ├─ depth1.npz
+│ │ └─ depth1.png
 │ ├─ L1/
 │ ├─ ...
 │ └─ Supine/
