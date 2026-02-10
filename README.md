@@ -4,8 +4,8 @@ The Sleeping Experiment Dataset, which contains 103 individual sample data
 # (Dataset Name) Radar Sleep Posture Dataset (103 Subjects)
 
 This dataset combines two subsets into a single release:
-- **72_SUBJECT_FULL_DATASET** (72 subjects)
-- **31_SUBJECT_FULL_DATASET** (31 subjects)
+- **Cohort_1** (72 subjects)
+- **Cohort_2** (31 subjects)
 
 Each subject contains multiple recording parts/sessions. For each part/session, data are organized by **sleep posture**, and each posture contains **8 radar channels** saved as `.pkl` files. A corresponding raw recording `.bag` file is stored at the subject root.
 
