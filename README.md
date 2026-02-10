@@ -1,10 +1,10 @@
 # Sleeping-Experiment-Dataset
-The Sleeping Experiment Dataset, which contains 103 individual sample data
+The Sleeping Experiment Dataset, which contains 99 individual sample data
 
-# (Dataset Name) Radar Sleep Posture Dataset (103 Subjects)
+# (Dataset Name) Radar Sleep Posture Dataset (99 Subjects)
 
 This dataset combines two subsets into a single release:
-- **Cohort_1** (72 subjects)
+- **Cohort_1** (68 subjects)
 - **Cohort_2** (31 subjects)
 
 Each subject contains multiple recording parts/sessions. For each part/session, data are organized by **sleep posture**, and each posture contains **8 radar channels** saved as `.pkl` files. A corresponding raw recording `.bag` file is stored at the subject root.
@@ -17,39 +17,45 @@ Each subject contains multiple recording parts/sessions. For each part/session, 
 
 ```text
 <DATASET_ROOT>/
-├─ 72_SUBJECT_FULL_DATASET/
+├─ Cohort_1/
 │  ├─ 1/
 │  ├─ 2/
 │  ├─ ...
-│  └─ 72/
-└─ 31_SUBJECT_FULL_DATASET/
+│  └─ 68/
+└─ Cohort_2/
    ├─ 1/
    ├─ 2/
    ├─ ...
    └─ 31/
 ```
-### 1.2 72-subject subset structure (example: subject `1`)
+### 1.2 Cohort_1 subset structure (example: subject `1`)
 
 ```text
-70_SUBJECT_FULL_DATASET/1/
-├─ 1/ # session/part id
-│ ├─ Left (bend 1 leg)/
+Cohort_1/1/
+├─ B1/ # Blanket id
+│ ├─ L0/
 │ │ ├─radar1.pkl
-│ │ ├─radar2.pkl
+│ │ ├─radar_map1.npy
+│ │ ├─radar_map1.png
 │ │ ├─ ...
 │ │ ├─ radar8.pkl
-| | └─
-│ ├─ Left (bend both legs)/
+│ │ ├─radar_map8.npy
+│ │ ├─radar_map8.png
+│ │ ├─radar_map_all.npy
+│ │ ├─radar_map_all.png
+│ │ ├─depth.npz
+| | └─depth.png
+│ ├─ L1/
 │ ├─ ...
 │ └─ Supine/
-├─ 2/
-└─ 3/
+├─ B2/
+└─ B3/
 ```
 ### 1.3 31-subject subset structure (example: subject `1`)
 
 ```text
 30_SUBJECT_FULL_DATASET/1/
-├─ 0/ # part id
+├─ B0/ # Blanket id
 │ ├─ Left (bend 1 leg)/
 │ │ ├─ radar1.pkl
 │ │ ├─ radar_map1.png
@@ -68,9 +74,9 @@ Each subject contains multiple recording parts/sessions. For each part/session, 
 │ ├─ Left (bend both legs)/
 │ ├─ ...
 │ └─ Supine/
-├─ 1/
-├─ 2/
-└─ 3/
+├─ B1/
+├─ B2/
+└─ B3/
 ```
 
 
@@ -80,40 +86,23 @@ Each subject contains multiple recording parts/sessions. For each part/session, 
 
 Each part/session contains the following posture folders:
 
-1. `Left (bend 1 leg)`
-2. `Left (bend both legs)`
-3. `Left (straight)`
-4. `Mid Fowler`
-5. `Prone (head to left)`
-6. `Prone (head to right)`
-7. `Right (bend 1 leg)`
-8. `Right (bend both legs)`
-9. `Right (straight)`
-10. `Supine`
-
----
-
-## 3. Data Files
-
-### 3.1 `.pkl` (processed radar channels)
-- Each posture folder contains **8** `.pkl` files: radar1 ... radar8.
-- **70-subject subset naming**: `<hh-mm-ss>-radar<1..8>.pkl`  
-  Example: `11-54-10-radar3.pkl`
-- **30-subject subset naming**: `radar<1..8>.pkl`  
-  Example: `radar3.pkl`
-
-> Note: The internal structure of each `.pkl` depends on the preprocessing pipeline. Use the loading example below to inspect keys/shapes.
-
-### 3.2 `.bag` (raw recording)
-- Each subject folder includes one `.bag` file at the subject root.
-- This is the depth camera raw recording for that subject (e.g., ROS bag).
+    1. "Mid Fowler": "MF"
+    2. "Supine": "SU"
+    3. "Left (straight)": "L0"
+    4. "Left (bend 1 leg)": "L1"
+    5. "Left (bend both legs)": "L2"
+    6. "Right (straight)": "R0"
+    7. "Right (bend 1 leg)": "R1"
+    8. "Right (bend both legs)": "R2"
+    9. "Prone (head to left)": "PL"
+    10. "Prone (head to right)": "PR"
 
 ---
 
 
-## 4. Loading Examples
+## 3. Loading Examples
 
-### 4.1 Load `.pkl` in Python
+### 3.1 Load `.pkl` in Python
 ```python
 import pickle
 from pathlib import Path
@@ -128,7 +117,6 @@ print(type(obj))
 if hasattr(obj, "keys"):
     print(obj.keys())
 ```
-### 4.2 Load `.bag` in Python
 
 
 ## 5. Citation / Acknowledgement
